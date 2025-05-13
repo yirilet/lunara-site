@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunara Özür</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      pointer-events: none;
+    }
+
+    .message {
+      white-space: nowrap;
+      font-size: 16px;
+      margin: 1px;
+      pointer-events: none;
+    }
+
+    .center-img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      max-width: 80%;
+      max-height: 80%;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <img src="file-TWaphqzczoP27gfFs5sEhQ" alt="Maymun" class="center-img">
+  <div class="wrapper" id="text-wrapper"></div>
+
+  <script>
+    const wrapper = document.getElementById('text-wrapper');
+    const message = "Özür dilerim, seni çok seviyorum ve çok pişmanım.";
+    const repeatCount = 1500;
+
+    for (let i = 0; i < repeatCount; i++) {
+      const span = document.createElement('span');
+      span.className = 'message';
+      span.textContent = message;
+      wrapper.appendChild(span);
+    }
+  </script>
+</body>
+</html>
